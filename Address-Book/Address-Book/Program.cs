@@ -40,6 +40,7 @@ namespace Address_Book
 
             addressBook.AddContact(firstName, lastName, address, city, state, zip, phoneNumber, email);
             addressBook.ShowContact();
+            addressBook.EditContact();
         }
     }
 }
