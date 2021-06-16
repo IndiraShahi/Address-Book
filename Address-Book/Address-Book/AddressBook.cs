@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace Address_Book
 {
@@ -55,7 +55,7 @@ namespace Address_Book
                 }
             }
             else
-                Console.WriteLine("No contacts to display...");
+                Console.WriteLine("No contacts to show!");
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Address_Book
         {
             if (Contacts.Count > 0)
             {
-                Console.WriteLine("Enter First Name of the contact to be edited : ");
+                Console.WriteLine("Enter first name of the contact to be edited : ");
                 string fName = Console.ReadLine();
 
                 foreach (Contact contact in Contacts)
@@ -165,7 +165,7 @@ namespace Address_Book
             {
                 ShowContact();
 
-                Console.WriteLine("Enter the First Name of the person you want to delete : ");
+                Console.WriteLine("Enter the first name of the person you want to delete : ");
                 string firstName = Console.ReadLine();
 
                 for (int i = 0; i < Contacts.Count; i++)
@@ -173,14 +173,14 @@ namespace Address_Book
                     if (Contacts[i].FirstName.Equals(firstName))
                     {
                         Contacts.RemoveAt(i);
-                        Console.WriteLine("Person Removed Successfully.");
+                        Console.WriteLine("Person deleted Successfully.");
                     }
                     else
                         Console.WriteLine("Person not found.");
                 }
             }
             else
-                Console.WriteLine("Contacts Not Found...");
+                Console.WriteLine("Contact not Found...");
         }
     }
 }
